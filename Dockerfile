@@ -11,7 +11,7 @@ RUN apt-get -qq update && \
                     build-essential \
                     gdb \
                     gcc-multilib \
-                    qemu-system-i386 \
+                    qemu-system-i386 \     
     &&git clone https://github.com/mit-pdos/xv6-public.git  xv6 \
     &&chmod +x xv6/*.pl \
 #    &&chmod +x xv6-11/*.pl \
