@@ -17,11 +17,11 @@ RUN apt-get -qq update && \
 #    &&chmod +x xv6-11/*.pl \
 ####
 #    5 lines for general cleanning, -15% in size  
-    &&apt-get purge -qq git \
-    &&apt-get autoremove --purge -qq \
-    &&apt-get clean -qq &&rm -rf /var/lib/apt/lists/* \
-    &&rm -rf /tmp/* /var/tmp/* \
-    &&rm -rf /usr/share/man/* /usr/share/doc/*
+    #&&apt-get purge -qq git \
+    #&&apt-get autoremove --purge -qq \
+    #&&apt-get clean -qq &&rm -rf /var/lib/apt/lists/* \
+    #&&rm -rf /tmp/* /var/tmp/* \
+    #&&rm -rf /usr/share/man/* /usr/share/doc/*
 
 WORKDIR /xv6
 #WORKDIR /xv6-11
