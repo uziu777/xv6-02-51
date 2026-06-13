@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 # add from local directory
 ADD ./xv6-01 /xv6-01
+
 RUN apt-get -qq update && \
 # --no-install-recommends reduces the Image size by almost 15%,
 # but in our case git needs --reinstall ca-certificates to work 
@@ -11,9 +12,9 @@ RUN apt-get -qq update && \
                     build-essential \
                     gdb \
                     gcc-multilib \
-                    qemu-system-i386\  
+                    qemu-system-i386 \  
     #&&git clone https://github.com/mit-pdos/xv6-public.git  xv6 \
-    && chmod +x /xv6-01/*.pl \
+    &&chmod +x /xv6-01/*.pl \
 #    &&chmod +x xv6-11/*.pl \
 ####
 #    5 lines for general cleanning, -15% in size  
@@ -27,4 +28,3 @@ WORKDIR /xv6-01
 #WORKDIR /xv6-11
 
 CMD ["/bin/bash"]
-
