@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
                     gdb \
                     gcc-multilib \
                     qemu-system-i386 \ 
-     &&chmod +x /xv6-01/xv6-01/*.pl \
+     &&chmod +x /xv6-01/*.pl \
 #    &&chmod +x xv6-11/*.pl \
 ####
 #    5 lines for general cleanning, -15% in size  
