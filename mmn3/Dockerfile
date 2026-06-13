@@ -13,7 +13,7 @@ RUN apt-get -qq update && \
                     gcc-multilib \
                     qemu-system-i386\  
     #&&git clone https://github.com/mit-pdos/xv6-public.git  xv6 \
-    &&chmod +x xv6-01/*.pl \
+    && chmod +x /xv6-01/*.pl \
 #    &&chmod +x xv6-11/*.pl \
 ####
 #    5 lines for general cleanning, -15% in size  
@@ -23,7 +23,7 @@ RUN apt-get -qq update && \
     &&rm -rf /tmp/* /var/tmp/* \
     &&rm -rf /usr/share/man/* /usr/share/doc/*
 
-WORKDIR /xv6
+WORKDIR /xv6-01
 #WORKDIR /xv6-11
 
 CMD ["/bin/bash"]
